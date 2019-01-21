@@ -36,7 +36,9 @@ def turn(board)
   index = input_to_index(input)
   until valid_move?(board,index)
     puts "Invalid move, try again"
-    move(board,index,character)
+    input = gets.strip
+    index = input_to_index(input)
   end
+  move(board,index)
   display_board(board)
 end
